@@ -26,7 +26,8 @@ def test_get_grid_office_coordinates_required():
 
 
 def test_get_grid_office_non_200_response():
-    client = WeatherAPIClient(coordinates=(1000.0, 2000.0))  # Fake invalid coordinates
+    # Fake invalid coordinates
+    client = WeatherAPIClient(coordinates=(1000.0, 2000.0))
     with pytest.raises(ConnectionError, match="Got a non-200 response code .*"):
         client.get_grid_office()
 

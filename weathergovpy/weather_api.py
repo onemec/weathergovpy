@@ -52,5 +52,6 @@ class WeatherAPIClient(BaseModel):
             )
         grid_office = office_rsp.json().get("properties", {}).get("cwa", "")
         if not grid_office:
-            raise ValueError("Failed to retrieve office code for given coordinates.")
+            raise ValueError(
+                "Failed to retrieve office code for given coordinates.")
         self.grid_office = grid_office
