@@ -1,0 +1,21 @@
+[project]
+name = "weathergovpy"
+version = "0.1.0"
+description = "An (unofficial) weather.gov API in Python"
+authors = [
+    {name = "Oliver Nemec", email = "28827159+onemec@users.noreply.github.com"},
+]
+dependencies = [
+]
+requires-python = ">=3.9"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.pdm.dev-dependencies]
+docs = [
+    "sphinx>=7.1.2",
+]
